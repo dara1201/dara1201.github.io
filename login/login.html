@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Halaman Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="myCard">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="myRightCtn">
+              <div
+                class="box d-flex justify-content-center align-items-center fs-1 flex-column"
+              >
+                <h1>WELCOME</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="myLeftCtn">
+              <form class="myForm text-center">
+                <header>LOGIN</header>
+                <div class="form-group">
+                  <i class="fas fa-envelope"></i>
+                  <input
+                    class="myInput"
+                    placeholder="Email"
+                    type="text"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <i class="fas fa-lock"></i>
+                  <input
+                    class="myInput"
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required
+                  />
+                </div>
+                <!-- Tombol login -->
+                <a href="../index.html" class="login-button" onclick="login()"
+                  >Login</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        function login() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (!email || !password) {
+    alert("Harap mengisi semua form terlebih dahulu!");
+    return false;
+  }
+
+  alert("Anda Berhasil Login");
+}
+
+    </script>
+  </body>
+</html>
